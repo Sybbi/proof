@@ -1,0 +1,72 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Начало -->
+<style>
+	/* Стили всего блока  */
+.proof { max-width: 290px; min-height: 50px; position: fixed; bottom: 20px; left: 20px;margin-right:20px; background-color: #fff; border-radius: 20px; border: 2px solid #EC6D88; padding:10px;	 z-index:10000; font-size:16px; -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
+#nameUser .imgProff { border: 2px solid #EC6D88; border-radius: 50px; width: 50px; height: 50px;}
+#nameUser { display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; 	-webkit-box-align: center; 	-webkit-align-items: center; 	    -ms-flex-align: center; 	        align-items: center; 	row-gap: 120px; 	-webkit-column-gap: 10px; 	   -moz-column-gap: 10px; 	        column-gap: 10px}
+#nameUser2 {display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; 	-webkit-box-align: center; 	-webkit-align-items: center; 	    -ms-flex-align: center; 	        align-items: center; 	row-gap: 120px; 	-webkit-column-gap: 10px; 	   -moz-column-gap: 10px; 	        column-gap: 10px}
+	</style>
+	<!-- первый -->
+		<div class="proof" id="modal2" style="display: none;">
+			<div id="nameUser2">
+				<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/284/h/2e0ee0519cdb9e0b2ade1de5178d7841.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Ольга, 48 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>
+			</div>
+	</div>
+
+	<!-- второй -->
+		<div class="proof"  id="modal-layer" style="display:none" >
+				<div id="nameUser">
+
+				</div>
+		</div>
+
+	<script>
+		
+			function explodeer() {
+
+					// Имена + картинки
+					var myArray = [
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/324/h/86d79693154637896965145198977e0c.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Дарья, 37 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/171/h/45acf72288ae9f2a785fc416905c89f5.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Нина, 65 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/8/h/3edbd6b6cc3cb6413ccca48d1cff91bf.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Светлана, 48 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/296/h/fb35d6d110bcb175eb6c83a8977d48de.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Валентина, 56 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/7/h/7bf0fe42b8477d2739c193356a254620.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Юлия, 40 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/136/h/fd5333713ab4c21413b6798ddb32af64.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock" style=""><span>Алина, 30 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/284/h/2e0ee0519cdb9e0b2ade1de5178d7841.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Наталья, 45 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/284/h/2e0ee0519cdb9e0b2ade1de5178d7841.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Людмила, 48 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/324/h/86d79693154637896965145198977e0c.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Любовь, 56 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/171/h/45acf72288ae9f2a785fc416905c89f5.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Алла, 35 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/8/h/3edbd6b6cc3cb6413ccca48d1cff91bf.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Антонина, 60 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/296/h/fb35d6d110bcb175eb6c83a8977d48de.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Марина, 45 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/7/h/7bf0fe42b8477d2739c193356a254620.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Оксана, 56 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/136/h/fd5333713ab4c21413b6798ddb32af64.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock" style=""><span>Раиса, 59 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/284/h/2e0ee0519cdb9e0b2ade1de5178d7841.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Ольга, 40 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/284/h/2e0ee0519cdb9e0b2ade1de5178d7841.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Людмила, 48 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/324/h/86d79693154637896965145198977e0c.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Мария, 39 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/171/h/45acf72288ae9f2a785fc416905c89f5.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Анна, 65 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/8/h/3edbd6b6cc3cb6413ccca48d1cff91bf.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Елизавета, 46 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/284/h/2e0ee0519cdb9e0b2ade1de5178d7841.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Анастасия, 36 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/296/h/fb35d6d110bcb175eb6c83a8977d48de.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Ирина, 58 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/7/h/7bf0fe42b8477d2739c193356a254620.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock"><span>Александра, 35 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>',
+					'<img src="https://fs.getcourse.ru/fileservice/file/download/a/88414/sc/136/h/fd5333713ab4c21413b6798ddb32af64.png" alt="аватврка" style="border: 2px solid #EC6D88;border-radius: 50px;margin-right:10px;width: 50px;height: 50px;"><div class="hideBlock" style=""><span>Олеся, 45 лет</span>,<br>зарегистрировалась <span style="White-space:nowrap;">на вебинар</span> «Идеальная&nbsp;Осанка»</div>'
+					];
+
+				 	var rand = Math.floor(Math.random()*myArray.length);
+					var rValue = myArray[rand];
+					console.log(rValue);
+					$('#nameUser').html(`${rValue}`);
+
+						
+					
+					$("#modal-layer").show('slow');
+					setTimeout(function() { $("#modal-layer").hide('slow'); }, 10000); // 100000 - 10 секунд ->  Время которое блок остаеться видимый 
+			}
+			setInterval(explodeer, 14000); //14000 миллисекунд = 12 секунд -> Веремя через которое обновляется скрипт (можно сказать всплывает блок)
+			
+			setTimeout(function() { $("#modal2").show('slow') }, 3000);
+			setTimeout(function() { $("#modal2").hide('slow'); }, 8000); // 100000 - 10 секунд ->  Время которое блок остаеться видимый 
+</script>
+
+<!-- Конец  -->
